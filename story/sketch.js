@@ -5,8 +5,7 @@ nelson bruno
 mmp310
 */
 
-// character variables
-//character#1
+// character variables -- nelson
 var x = 200;
 var y = 200;
 var faceSize = 200;
@@ -15,11 +14,22 @@ var eyeOffset = 40;
 var c = 'orangered'; // color
 var greeting = '"Hello my dude!"';
 
+// second character -- keysha
+var keyshaX = 700;
+var keyshaY = 200;
+var keyshaSize = 200;
+var keyshaeyeSize = 20;
+var keyshaeyeOffset= 50;
+var keyshaColor = 'pink';
+var keyshaGreeting = '"Lets Play."';
+
+var story1 = "Once upon a time Keysha and Nelson we're playing in the abyss";
+
 function setup() {
 	createCanvas(windowWidth, 600);
 	background('black');
     
-	//character#1
+	// nelson character
 	fill(c);
 	ellipse(x, y, faceSize); // face
 	fill('orange');
@@ -33,7 +43,22 @@ function setup() {
 	noStroke();
 	text(greeting, x + 100, y - 50);
     
-    //chracter#2
-    fill(c);
-    rect(x, y, faceSize);//face
-}
+    // keysha chracter
+    fill(keyshaColor)
+    stroke('white')
+    // face
+    rect(keyshaX, keyshaY, keyshaSize, keyshaSize);
+    // left eye
+    rect(keyshaX - keyshaeyeOffset, keyshaY - keyshaeyeOffset, keyshaeyeSize, keyshaeyeSize);
+    // right eye
+    rect(keyshaX + keyshaeyeOffset, keyshaY - keyshaeyeOffset, keyshaeyeSize, keyshaeyeSize);
+    
+    textSize(40);
+    fill('white');
+    noStroke();
+    text(keyshaGreeting, keyshaX - 250, keyshaY + 50);
+    
+    textAlign(CENTER);
+	text(story1, width/2, height - 50);
+    
+    }
