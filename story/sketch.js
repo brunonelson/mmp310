@@ -23,7 +23,7 @@ var keyshaeyeOffset= 50;
 var keyshaColor = 'pink';
 var keyshaGreeting = '"Lets Play."';
 
-var story1 = "Once upon a time Keysha and Nelson we're playing in the abyss";
+var story1 = "Once upon a time Keysha and Nelson were playing in the abyss";
 
 function setup() {
 	createCanvas(windowWidth, 600);
