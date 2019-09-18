@@ -51,6 +51,17 @@ function draw() {
         backgorund('brown');
         
         // desert scene
+        fill('yellow');
+        noStroke();
+        
+        for (let x = 0; x < width; x += 50) {
+			triangle(
+				x, 100 + random(200),
+				x + 50, 600,
+				x - 50, 600
+			);	
+		}
+        
         
         
     } else if (scene =="artic") {
