@@ -19,7 +19,7 @@ var keyshaX = 700;
 var keyshaY = 200;
 var keyshaSize = 200;
 var keyshaeyeSize = 20;
-var keyshaeyeOffset= 50;
+var keyshaeyeOffset = 50;
 var keyshaColor = 'pink';
 var keyshaGreeting = '"Lets Play."';
 
@@ -27,88 +27,118 @@ var story1 = "Once upon a time Keysha and Nelson were playing in the abyss";
 
 //three scenes: desert, artic, space
 
-var scene = "desert"
+var scene = "space";
 
 
 function setup() {
-	createCanvas(windowWidth, 600);
+    createCanvas(windowWidth, 600);
     // scene = random(["desert", "artic", "space"
 }
 
 function mousePressed() {
-    if (scene =="desert") {
+    if (scene == "desert") {
         scene = "artic";
-        } else if(scene == "artic") {
-            scene = "space";
-        } else if (scene == "space") {
-            scene = "desert";
-        }
+    } else if (scene == "artic") {
+        scene = "space";
+    } else if (scene == "space") {
+        scene = "desert";
+    }
 }
 
 function draw() {
     // set the setting
     if (scene == "desert") {
-        backgorund('brown');
-        
+        background('WHEAT');
+
         // desert scene
-        fill('yellow');
+        fill('PERU');
         noStroke();
-        
-        for (let x = 0; x < width; x += 50) {
-			triangle(
-				x, 100 + random(200),
-				x + 50, 600,
-				x - 50, 600
-			);	
-		}
-        
-        
-        
-    } else if (scene =="artic") {
-        backgound("blue");
-        
+
+        for (let x = 0; x < width; x += 300) {
+            triangle(
+                x, 20 + random(20),
+                x + 100, 600,
+                x - 100, 600,
+            );
+        }
+
+
+
+    } else if (scene == "artic") {
+        background("LIGHTSTEELBLUE");
+
         // artic scene
-        
-    } else if (sence == "space") {
-        backgorund("black");
+        fill('white');
+        noStroke();
+        //        for (let x = 0; x < width; x += 200) {
+        //            rect(x, 100 + random(100), 90, height - 100);
+        //        }
+        noStroke();
+        fill('white');
+        triangle(-100, height, 100, 100, 200, height);
+        fill('lightgray');
+        triangle(-100, height, 200, 200, 300, height);
+        fill('white');
+        triangle(-100, height, 200, 290, 300, height);
+        fill('lightgray');
+        triangle(-100, height, 400, 200, 300, height);
+        fill('white');
+        triangle(-100, height, 600, 200, 400, height);
+        fill('lightgray');
+        triangle(-100, height, 900, 200, 800, height);
+        fill('white');
+        triangle(-100, height, 950, 200, 900, height);
+        fill('lightgray');
+        triangle(-100, height, 1300, 200, 1200, height);
+        fill('white');
+        triangle(-100, height, 1400, 200, 1200, height);
+        fill('lightgray');
+        triangle(-100, height, 1500, 290, 300, height);
+
+
+
+
+    } else if (scene == "space") {
+        background("black");
+
+    }
     
-	
-    
-	// nelson character
-	fill(c);
-	ellipse(x, y, faceSize); // face
-	fill('orange');
-	stroke('white');
-	strokeWeight(4);
-	ellipse(x - eyeOffset, y - eyeOffset, eyeSize, eyeSize); // left eye
-	ellipse(x + eyeOffset, y - eyeOffset, eyeSize, eyeSize); // right eye
-	
-	textSize(40);
-	fill('white');
-	noStroke();
-	text(greeting, x + 100, y - 50);
-    
+
+    // nelson character
+    fill(c);
+    ellipse(x, y, faceSize); // face
+    fill('orange');
+    stroke('white');
+    strokeWeight(4);
+    ellipse(x - eyeOffset, y - eyeOffset, eyeSize, eyeSize); // left eye
+    ellipse(x + eyeOffset, y - eyeOffset, eyeSize, eyeSize); // right eye
+
+    textSize(40);
+    fill('white');
+    noStroke();
+    text(greeting, x + 100, y - 50);
+
     // keysha chracter
     fill(keyshaColor)
     stroke('white')
-    // face
+        // face
     rect(keyshaX, keyshaY, keyshaSize, keyshaSize);
     // left eye
     rect(keyshaX - keyshaeyeOffset, keyshaY - keyshaeyeOffset, keyshaeyeSize, keyshaeyeSize);
     // right eye
     rect(keyshaX + keyshaeyeOffset, keyshaY - keyshaeyeOffset, keyshaeyeSize, keyshaeyeSize);
-    
+
     textSize(40);
     fill('white');
     noStroke();
     text(keyshaGreeting, keyshaX - 250, keyshaY + 50);
-    
+
     textAlign(CENTER);
-	text(story1, width/2, height - 50);
-        
-        
+    text(story1, width / 2, height - 50);
+
+
     // instruction
-        textSize(20);
-        text("Click to go to the next scene" - 100, 10, 100, 100);
-    
-    }
+    textSize(20);
+    text("Click to go to the next scene" - 100, 10, 100, 100);
+
+}
