@@ -27,7 +27,7 @@ var story1 = "Once upon a time Keysha and Nelson were playing in the abyss";
 
 //three scenes: desert, artic, space
 
-var scene = "space";
+var scene = "desert";
 
 
 function setup() {
@@ -100,9 +100,24 @@ function draw() {
 
     } else if (scene == "space") {
         background("black");
+        noStroke();
+        fill('green');
+        ellipse(100, 50, 100, 100);
+        fill('red');
+        ellipse(500, 100, 100, 100);
+        fill('orange');
+        ellipse(700, 200, 100, 100);
+        fill('green');
+        ellipse(350, 450, 100, 100);
+        fill('red');
+        ellipse(600, 400, 100, 100);
+        fill('orange');
+        ellipse(950, 350, 100, 100);
+        fill('green');
+        ellipse(900, 50, 100, 100);
 
     }
-    
+
 
     // nelson character
     fill(c);
@@ -137,8 +152,7 @@ function draw() {
     text(story1, width / 2, height - 50);
 
 
-    // instruction
+    /* instructions */
     textSize(20);
-    text("Click to go to the next scene" - 100, 10, 100, 100);
-
+    text("Click to go to the next scene", width - 100, 10, 100, 100);
 }
