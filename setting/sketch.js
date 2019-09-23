@@ -27,7 +27,7 @@ var story1 = "Once upon a time Keysha and Nelson were playing in the abyss";
 
 //three scenes: desert, artic, space
 
-var scene = "space";
+var scene = "desert";
 
 
 function setup() {
