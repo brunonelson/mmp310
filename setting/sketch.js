@@ -100,7 +100,19 @@ function draw() {
 
     } else if (scene == "space") {
         background("black");
-
+        fill('green');
+        ellipse(100, 50, 100, 100);
+        fill('red');
+        ellipse(500, 100, 100, 100);
+        fill('orange');
+        ellipse(700, 200, 100, 100);
+        fill('green');
+        ellipse(350, 450, 100, 100);
+        fill('red');
+        ellipse(600, 400, 100, 100);fill('orange');
+        ellipse(950, 350, 100, 100);fill('green');
+        ellipse(900, 50, 100, 100);
+                
     }
     
 
