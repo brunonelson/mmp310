@@ -42,10 +42,11 @@ function draw() {
                 x - 100, 600,
             );
         }
-        
+
         nelson(200, 400, 200, 'orange', '"hello my dude"');
-		keysha(700, 300, 200, 'pink', '"lets play"');
-		narration("Once upon a time, Nelson and Keysha met in the desert to play .");
+        keysha(700, 300, 200, 'pink', '"lets play"');
+        narration("Once upon a time, Nelson and Keysha met in the desert to play .");
+        
 
 
 
@@ -79,11 +80,11 @@ function draw() {
         triangle(-100, height, 1400, 200, 1200, height);
         fill('lightgray');
         triangle(-100, height, 1500, 290, 300, height);
-        
+
         nelson(100, 200, 200, 'orange', '"wow this place is pretty cool"');
-		keysha(400, 200, 200, 'pink', '"yeah your right nelson"');
-		narration("after the artic they decided to move on.");
-    
+        keysha(400, 200, 200, 'pink', '"yeah your right nelson"');
+        narration("after the artic they decided to move on.");
+
 
 
 
@@ -105,13 +106,12 @@ function draw() {
         ellipse(950, 350, 100, 100);
         fill('green');
         ellipse(900, 50, 100, 100);
+        nelson(600, 100, 200, 'orange', '"hey how did we end up here."');
+    keysha(700, 100, 200, 'pink', '"i have no idea"');
+    narration("Some how Nelson and Keysha ended up in space");
 
     }
 
-nelson(600, 100, 200, 'orange', '"hey how did we end up here."');
-		keysha(700, 100, 200, 'pink', '"i have no idea"');
-		narration("Some how Nelson and Keysha ended up in space");
-    
 
 
     /* instructions */
@@ -119,13 +119,16 @@ nelson(600, 100, 200, 'orange', '"hey how did we end up here."');
     text("Click to go to the next scene", width - 100, 10, 100, 100);
 }
 
-function narration(story) {textAlign(CENTER);
-    text(story1, width / 2, height - 50);
+function narration(story) {
+    textAlign(CENTER);
+    text(story, width / 2, height - 50);
 }
 
-function nelson(x, y, size, col, greeting) { 
-    fill(c);
-    ellipse(x, y, faceSize); // face
+function nelson(x, y, size, col, greeting) {
+    var eyeSize = size / 4;
+    var eyeOffset = size / 5;
+    fill('red');
+    ellipse(x, y, size); // face
     fill('orange');
     stroke('white');
     strokeWeight(4);
@@ -138,7 +141,14 @@ function nelson(x, y, size, col, greeting) {
     text(greeting, x + 100, y - 50);
 }
 
-function keysha(x, y, size, col, greeting) { fill(keyshaColor)
+function keysha(x, y, size, col, greeting) {
+    var keyshaX = 700;
+    var keyshaY = 200;
+    var keyshaSize = 200;
+    var keyshaeyeSize = 20;
+    var keyshaeyeOffset = 50;
+    var keyshaGreeting = '"Lets Play."';
+    fill('pink')
     stroke('white')
         // face
     rect(keyshaX, keyshaY, keyshaSize, keyshaSize);
@@ -151,8 +161,5 @@ function keysha(x, y, size, col, greeting) { fill(keyshaColor)
     fill('white');
     noStroke();
     text(keyshaGreeting, keyshaX - 250, keyshaY + 50);
-    
-    }
-    
-    
-    
+
+}
