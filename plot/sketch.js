@@ -127,7 +127,7 @@ function narration(story) {
 function nelson(x, y, size, col, greeting) {
     var eyeSize = size / 4;
     var eyeOffset = size / 5;
-    fill('red');
+    fill('orangered');
     ellipse(x, y, size); // face
     fill('orange');
     stroke('white');
@@ -138,7 +138,7 @@ function nelson(x, y, size, col, greeting) {
     textSize(40);
     fill('white');
     noStroke();
-    text(greeting, x + 100, y - 50);
+    text(greeting, x + 250, y - 50);
 }
 
 function keysha(x, y, size, col, greeting) {
@@ -160,6 +160,6 @@ function keysha(x, y, size, col, greeting) {
     textSize(40);
     fill('white');
     noStroke();
-    text(keyshaGreeting, keyshaX - 250, keyshaY + 50);
+    text(keyshaGreeting, keyshaX - 150, keyshaY + 50);
 
 }
