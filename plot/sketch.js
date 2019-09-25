@@ -46,7 +46,7 @@ function draw() {
         nelson(200, 400, 200, 'orange', '"hello my dude"');
         keysha(700, 300, 200, 'pink', '"lets play"');
         narration("Once upon a time, Nelson and Keysha met in the desert to play .");
-        
+
 
 
 
@@ -107,8 +107,8 @@ function draw() {
         fill('green');
         ellipse(900, 50, 100, 100);
         nelson(600, 100, 200, 'orange', '"hey how did we end up here."');
-    keysha(700, 100, 200, 'pink', '"i have no idea"');
-    narration("Some how Nelson and Keysha ended up in space");
+        keysha(700, 100, 200, 'pink', '"i have no idea"');
+        narration("Some how Nelson and Keysha ended up in space");
 
     }
 
