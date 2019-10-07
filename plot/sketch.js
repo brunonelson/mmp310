@@ -8,7 +8,7 @@ mmp310
 
 //three scenes: desert, artic, space
 
-var scene = "desert";
+var scene = "space";
 
 
 function setup() {
@@ -30,29 +30,21 @@ function draw() {
     // set the setting
     if (scene == "desert") {
         desert();
-        nelson(200, 400, 200, 'orange', '"hello my dude"');
+        nelson(200, 400, 200, 'orange', '"hello my dude"', 250 , 100);
         keysha(700, 300, 200, 'pink', '"lets play"');
         narration("Once upon a time, Nelson and Keysha met in the desert to play .");
 
-
-
-
     } else if (scene == "artic") {
         artic();
-        nelson(100, 200, 200, 'orange', '"wow this place is pretty cool"');
-        keysha(400, 200, 200, 'pink', '"yeah your right nelson"');
+        nelson(100, 200, 200, 'orange', '"wow this place is pretty cool"',400, 90);
+        keysha(600, 200, 200, 'pink', '"yeah your right nelson"',200, 150);
         narration("after the artic they decided to move on.");
-
-
-
-
 
     } else if (scene == "space") {
         space();
-        nelson(600, 100, 200, 'orange', '"hey how did we end up here."');
-        keysha(700, 100, 200, 'pink', '"i have no idea"');
+        nelson(150, 150, 200, 'orange', '"hey how did we end up here."',400,50);
+        keysha(700, 200, 200, 'pink', '"i have no idea"');
         narration("Some how Nelson and Keysha ended up in space");
-
     }
 
 
@@ -67,7 +59,7 @@ function narration(story) {
     text(story, width / 2, height - 50);
 }
 
-function nelson(x, y, size, col, greeting) {
+function nelson(x, y, size, col, greeting, greetingX, greetingY) {
     var eyeSize = size / 4;
     var eyeOffset = size / 5;
     fill('orangered');
@@ -81,16 +73,15 @@ function nelson(x, y, size, col, greeting) {
     textSize(40);
     fill('white');
     noStroke();
-    text(greeting, x + 250, y - 50);
+    text(greeting, x + greetingX, y - greetingY);
 }
 
 function keysha(keyshaX, keyshaY, keyshaSize, col, keyshaGreeting) {
-    var keyshaX = 700;
-    var keyshaY = 200;
-    var keyshaSize = 200;
+
+
     var keyshaeyeSize = 20;
     var keyshaeyeOffset = 50;
-    var keyshaGreeting = '"Lets Play."';
+
     fill('pink')
     stroke('white')
         // face
@@ -134,23 +125,23 @@ function artic() {
     //            rect(x, 100 + random(100), 90, height - 100);
     //        }
     noStroke();
-    fill('white');
+    fill('lightblue');
     triangle(-100, height, 100, 100, 200, height);
     fill('lightgray');
     triangle(-100, height, 200, 200, 300, height);
-    fill('white');
+    fill('lightblue');
     triangle(-100, height, 200, 290, 300, height);
     fill('lightgray');
     triangle(-100, height, 400, 200, 300, height);
-    fill('white');
+    fill('lightblue');
     triangle(-100, height, 600, 200, 400, height);
     fill('lightgray');
     triangle(-100, height, 900, 200, 800, height);
-    fill('white');
+    fill('lightblue');
     triangle(-100, height, 950, 200, 900, height);
     fill('lightgray');
     triangle(-100, height, 1300, 200, 1200, height);
-    fill('white');
+    fill('lightblue');
     triangle(-100, height, 1400, 200, 1200, height);
     fill('lightgray');
     triangle(-100, height, 1500, 290, 300, height);
