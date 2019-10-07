@@ -8,7 +8,7 @@ mmp310
 
 //three scenes: desert, artic, space
 
-var scene = "space";
+var scene = "desert";
 
 
 function setup() {
