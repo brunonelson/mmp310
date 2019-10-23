@@ -3,9 +3,9 @@
 	user interface
 	10.16.2019
 */
-var r = 221;
-var g = 160;
-var b = 221;
+var r = 255;
+var g = 50;
+var b = 100;
 var num = 50;
 var nameInput;
 
@@ -25,15 +25,21 @@ function setup() {
 	numSlider.input(getNum);
     
     createP("Change background color");
-	var redSlider = createSlider(100, 255, r);
-	//redSlider.input(updateRed);
+	var redSlider = createSlider(100, 255, red);
+	redSlider.input(getRed);
+    
+    //createP("moveshaps");
+	//var shapSlider = createSlider(10, 100, moveshaps);
+	//shapSlider.input(updateEyes);
+	//shapSliderSlider.position(width - 200, 50);
+    
 	
 }
 
-//function updateRed() {
-	//r = this.value();
-	//backgroundcolor();
-//}
+function getRed() {
+	r = this.value();
+	pattern();
+}
 
 function getNum() {
 	num = this.value();
@@ -44,19 +50,26 @@ function saveImage() {
 	save(nameInput.value() + ".png");
 }
 
+//function updateEyes() {
+	//moveshaps = this.value();
+	//pattern();
+//}
 
 function pattern() {
-	background('#FAD7A0');
+	background(r,g,b);
+    
 	noStroke();
 	//fill('#E67E22 ');
 	
 	for (let i = 0; i < num; i++) {
-        fill('#E67E22 ');
+        fill("#D98880");
 		ellipse(random(width), random(height), random(50, 100));
-        fill("red");
-        rect( random(width) , random( height) , random(100) , random(50));
-        fill("blue");
-        //quad(random(width), random(height), random(50), random(20), random(69), random(63),random(30), random(76));
+        fill("#B03A2E ");
+        rect( random(width) , random( height) , random(100) , random(100));
+        fill("#641E16");
+        quad(random(width), random(height), random(50), random(50), random(50), random(50),random(50), random(50));
+        fill("#CB4335");
+        quad(random(width), random(height), random(50), random(50), random(50), random(50),random(50), random(50));
         
 	}
     }
