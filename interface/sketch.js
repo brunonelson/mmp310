@@ -24,20 +24,35 @@ function setup() {
 	var numSlider = createSlider(1, 100, num);
 	numSlider.input(getNum);
     
-    createP("Change background color");
+    createP("Change background color Red");
 	var redSlider = createSlider(100, 255, red);
 	redSlider.input(getRed);
     
-    //createP("moveshaps");
-	//var shapSlider = createSlider(10, 100, moveshaps);
-	//shapSlider.input(updateEyes);
-	//shapSliderSlider.position(width - 200, 50);
+     createP("Change background color Green");
+	var greenSlider = createSlider(100, 255, green);
+	greenSlider.input(getgreen);
+    
+    createP("Change background color Blue");
+	var blueSlider = createSlider(100, 255, green);
+	blueSlider.input(getblue);
+    
+    
     
 	
 }
 
 function getRed() {
 	r = this.value();
+	pattern();
+}
+
+function getgreen() {
+	g = this.value();
+	pattern();
+}
+
+function getblue() {
+	b = this.value();
 	pattern();
 }
 
@@ -50,10 +65,8 @@ function saveImage() {
 	save(nameInput.value() + ".png");
 }
 
-//function updateEyes() {
-	//moveshaps = this.value();
-	//pattern();
-//}
+
+
 
 function pattern() {
 	background(r,g,b);
