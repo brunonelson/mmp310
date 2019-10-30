@@ -5,8 +5,8 @@
 
 var sizes = [80, 90, 70, 80, 90, 70];
 var position = [0, 10, -10, 20, -20, 0];
-var speed = [1, 2, 3, 4, 5, 6];
-
+var speed = [2, 3, 2, 3, 2, 3];
+var r = [50,60,40,90,30,90];
 
 function setup() {
 	createCanvas(640, 360);
@@ -17,25 +17,30 @@ function draw() {
 	noStroke();
 	
 	for (let i = 0; i < sizes.length; i++) {
-		pumpkin(50 + i * 100, position[i], sizes[i]);
+		apples(40 + i * 100, position[i], sizes[i], r[i]);
 		
 		position[i] += speed[i];
+        r[i] += 1;
 	}
+    
 }
 
-function pumpkin(x, y, s) {
-	fill('green');
-	rect(x, y - s/2, s/20, s/5); // stem
-	
-	fill('orange');
-	ellipse(x, y, s, s - 25); // base
-	
-	
-	fill('black');
-	triangle(x - s/4, y - s/4, x - s/3, y, x - s/5, y); // eye
-	triangle(x + s/4, y - s/4, x + s/3, y, x + s/5, y); // eye
+function apples(x, y, s, r) {
+    
+	fill(r, 200-r, 0);
+    rect(x, y, s, s);
+	stroke("black");
+    fill('white')
+    ellipse(x + s/2, y + s/5, 25, 25);
+    fill('#16A806')
+    ellipse(x + s/2, y + s/5, 15, 15);
+    fill("black")
+    ellipse(x + s/2, y + s/5, 10, 10);
+    fill("white")
+    ellipse(x + s/2, y + s/5, 4, 4);
+    
 
-	for (let i = 0; i < 5; i++) {
-		rect(x - s/4 + i * (s/10), y + s/5, s/20, s/10);	
-	}
+	
+
 }
+
