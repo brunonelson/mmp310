@@ -19,23 +19,21 @@ function draw() {
 }
 
 function apples(x, y, s) {
-	//fill('green');
-	//rect(x, y - s/2, s/20, s/5); // stem
-	
+    
 	fill('#CCED82 ');
-	//ellipse(x, y, s, s - 25); // base
     rect(x, y, s, s);
-	
-	stroke("white");
-	fill('#16A806');
-	//triangle(x - s/4, y - s/4, x - s/3, y, x - s/5, y); // eye
-	//triangle(x + s/4, y - s/4, x + s/3, y, x + s/5, y); // eye
-    ellipse(x + s/4, y + s/5, 25, 25);
-    ellipse(x + s/4, y + s/5, 25, 25);
+	stroke("black");
+    fill('white')
+    ellipse(x + s/2, y + s/5, 25, 25);
+    fill('#16A806')
+    ellipse(x + s/2, y + s/5, 15, 15);
+    fill("black")
+    ellipse(x + s/2, y + s/5, 10, 10);
+    fill("white")
+    ellipse(x + s/2, y + s/5, 4, 4);
+    
 
-	//for (let i = 0; i < 5; i++) {
-		//rect(x - s/4 + i * (s/10), y + s/5, s/20, s/10);	
-	//}
+	
 }
 
 
