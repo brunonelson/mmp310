@@ -10,7 +10,7 @@ var spaceship;
 function setup() {
 	createCanvas(windowWidth, windowHeight);
 	
-	for (let i = 0; i < 30; i++) {
+	for (let i = 0; i < 60; i++) {
 		asteroids.push( new Asteroid() );
 	}
 	
