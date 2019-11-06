@@ -4,9 +4,12 @@ class Spaceship extends Thing {
 	}
 	
 	display() {
-		fill(255, 0, 255);
-		noStroke();
-		ellipse(this.x, this.y, this.size);
+		stroke(255);
+		strokeWeight(8);
+		//ellipse(this.x, this.y, this.size);
+        stroke(29, 1, 38 ); 
+        strokeWeight(10);  
+        point(this.x, this.y);
 	}
 	
 	move() {

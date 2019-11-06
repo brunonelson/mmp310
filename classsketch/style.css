@@ -4,7 +4,7 @@ body {
 
 p {
 	font-size: 2em;
-	font-family: monospace;
+	font-family: fantasy;
 	color: white;
 	margin: 0;
 	position: absolute;
@@ -66,11 +66,3 @@ input[type=range]::-webkit-slider-runnable-track {
 	height: 10px;
 	
 }
-
-
-
-
-
-
-
-

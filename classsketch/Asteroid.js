@@ -9,8 +9,14 @@ class Asteroid extends Thing {
 	}
 	
 	display() {
-		// draw your asteroid
-		// this.x, this.y for position
-		// this.size
+		noFill();
+		stroke(91, 1, 122);
+		strokeWeight(8);
+		rect(this.x, this.y, this.size, this.size);
+        noFill();
+		stroke(203, 56, 254);
+		strokeWeight(8);
+        ellipse(this.x, this.y, this.size);
+
 	}
 }
