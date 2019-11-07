@@ -4,8 +4,8 @@ class Spaceship extends Thing {
 	}
 	
 	display() {
-		stroke(255);
-		strokeWeight(8);
+		//stroke(255);
+		//strokeWeight(8);
 		//ellipse(this.x, this.y, this.size);
         stroke(29, 1, 38 ); 
         strokeWeight(10);  
